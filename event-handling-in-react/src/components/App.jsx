@@ -5,7 +5,7 @@ function App() {
   const [isMousedOver, setMouseOver] = useState(false);
 
   function handleClick() {
-    setHeadingText("Submitted");
+    setHeadingText("Button Clicked and Content has Changed");
   }
 
   function handleMouseOver() {
