@@ -9,15 +9,19 @@ function App() {
 
   function updateFullName(event) {
     const newValue = event.target.value;
-    const name = event.target.name;
-    if(name === "fName") {
+    const inputName = event.target.name;
+
+      // const { value, name } = event.target  =>>> inputName = name  , newValue = value   
+
+
+    if(inputName === "fName") {
       setFullName(prev =>  {
         return {
           ...prev,
           fName: newValue
         };
       });
-    } else if ( name === "lName") {
+    } else if ( inputName === "lName") {
       setFullName(prev => {
         return {
           ...prev,
