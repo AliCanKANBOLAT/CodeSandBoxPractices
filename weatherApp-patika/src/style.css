@@ -1,0 +1,32 @@
+.forecast-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease; 
+}
+
+.forecast-card {
+  width: 13%;
+  max-width: 200px; 
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1395px) {
+
+.forecast-card {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto; 
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+
+.current-weather {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+}
+}
