@@ -1,28 +1,30 @@
-//createArea.jsx
-
 import React, { useState } from "react";
 
 function CreateArea(props) {
-
-  const [ note, setNote] = useState({
-    title: "",
-    content : ""
+  const[note, setNote] = useState({
+    title:"",
+    content:""
   })
 
-  function handleChange (event) {
-    const { name, value } = event.target
-    setNote( prevNote => {
-      return{
-        ...prevNote,
-        [name] :value
-      }
+  function handleChange(event) {
+    const {value,name} = event.target;
+    setNote(prev => {
+      return (
+        {...prev,
+        [name] : value
+        }
+      )
     })
   }
- function handleClick (event) {
-  event.preventDefault()
-  props.onAdd(note)
-  setNote({ title: "", content: "" });
- }
+
+  function handleClick (event) {
+    event.preventDefault()
+    props.onAdd(note)
+    setNote({
+      title:"",
+    content:""
+    })
+  }
 
   return (
     <div>

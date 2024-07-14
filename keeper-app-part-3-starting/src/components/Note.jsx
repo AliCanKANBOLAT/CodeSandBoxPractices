@@ -1,16 +1,16 @@
-//Note.jsx
-
 import React from "react";
 
 function Note(props) {
-  function handleDelete () {
-    props.onDelete(props.id)
-  }
+function handleId() {
+  props.onDelete(props.id)
+  console.log("id alindi:::",props.id)
+}
+
   return (
     <div className="note">
       <h1>{props.title}</h1>
       <p>{props.content}</p>
-      <button onClick={handleDelete}>DELETE</button>
+      <button onClick={handleId}>DELETE</button>
     </div>
   );
 }

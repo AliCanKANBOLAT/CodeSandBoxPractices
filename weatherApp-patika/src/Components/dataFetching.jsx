@@ -14,7 +14,7 @@ export default function DataFetching() {
 
   const fetchData = async (latitude, longitude) => {
     try {
-      const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${latitude},${longitude}&days=7&aqi=yes&alerts=yes`);
+      const response = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${latitude},${longitude}&days=7&aqi=yes&alerts=yes`);
       setWeatherData(response.data);
     } catch (error) {
       setError(error.message);
